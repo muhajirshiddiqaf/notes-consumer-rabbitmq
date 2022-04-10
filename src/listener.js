@@ -19,7 +19,7 @@ class Listener {
             "songs" : songs  
           }
         };
-        const result = await this._mailSender.sendEmail(targetEmail, data);
+        const result = await this._mailSender.sendEmail(targetEmail, JSON.stringify(data));
         console.log(result);
       } catch (error) {
         console.error(error);
